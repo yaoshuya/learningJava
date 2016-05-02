@@ -1,7 +1,7 @@
- 
+package thinkInJava;
 
 import java.util.Random;
-import static net.mindview.util.Print.*;
+import static net.mindview.util.Print.*; //static import then I can use printnb not with class Name
 
 public class VowelsAndConsonants {
 	public static void main(String[] args)
@@ -9,7 +9,7 @@ public class VowelsAndConsonants {
 		Random rand = new Random(47);
 		for (int i=0; i<100; i++)
 		{
-			int c = rand.nextInt(26) +'a';
+			int c = rand.nextInt(26) +'a';// 0 -- 25
 			printnb((char)c + ", " + c + ": ");
 			
 			switch(c){
