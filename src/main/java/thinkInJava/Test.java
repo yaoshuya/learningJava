@@ -8,7 +8,7 @@ public class Test {
 		
 		public Test(int _i)
 		{
-			i = _i;
+			i = _i;	
 			counter++;
 		}
 		
