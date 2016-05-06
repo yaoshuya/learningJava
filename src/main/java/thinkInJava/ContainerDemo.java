@@ -45,7 +45,12 @@ public class ContainerDemo {
  * @see     AbstractCollection
  * add addAll remove removeAll isEmpty Contains toArray
 * */
-	class Plant implements Serializable {
+	class Plant implements Serializable,Comparable<Plant> {
+	    public int compareTo(Plant p)
+	    {
+	    	return this.age.compareTo(p.age);
+	    }
+
 		public Plant() {
 			name = "untitled";
 			age = 0;
@@ -72,7 +77,7 @@ public class ContainerDemo {
 			this.name = name;
 		}
 
-		public int getAge() {
+		public Integer getAge() {
 			return age;
 		}
 
@@ -80,7 +85,7 @@ public class ContainerDemo {
 			this.age = age;
 		}
 
-		private int age;
+		private Integer age;
 
 	}
 
@@ -106,8 +111,10 @@ public class ContainerDemo {
 	public static void main(String[] args) {
 		Flower f = new ContainerDemo().new Flower();
 		f.setName("YueJie");
+		f.setAge(1);
 		Flower f2 = new ContainerDemo().new Flower();
 		f2.setName("MeiGui");
+		f2.setAge(3);
 		Plant px = new ContainerDemo().new Plant();
 		List<Plant> plants =
 				//new ArrayList<Plant>();
@@ -115,9 +122,12 @@ public class ContainerDemo {
 		plants.add(f);
 		plants.add(f2);
 		plants.add(px);
+		//custome sort by name
+		Collections.sort(plants);
 		for(Plant p : plants)
 			print(p + " :" + p.getName());
 		plants.clear();
+		
 		
 		Set<Integer> set1 = new HashSet<Integer>();
 			 randColl(set1,10);

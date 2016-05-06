@@ -2,6 +2,11 @@ package thinkInJava;
 
 import static net.mindview.util.Print.*;
 
+import java.io.IOException;
+import java.util.Map.Entry;
+import java.util.Properties;
+ 
+
 public class Test {
 		private static int i;
 		static private int counter;
@@ -18,11 +23,13 @@ public class Test {
 			print("total number of class Test is " + counter);
 		}
 		
-		public static void main(String[] args)
+		public static void main(String[] args) throws IOException
 		{
-			Test t1 = new Test(10);
-			t1.printMsg();
-			Test t2 = new Test(100);
-			t2.printMsg();
+			//Runtime r = Runtime.getRuntime();
+			//Process p = r.exec("notepad.exe abc.txt");
+			//p.destroy();
+			Properties prop = System.getProperties();
+			for(Entry<?, ?> item :prop.entrySet())
+				print(item.getKey() + " : " + item.getValue());
 		}
 }
