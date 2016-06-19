@@ -127,8 +127,7 @@ public class ContainerDemo {
 		for(Plant p : plants)
 			print(p + " :" + p.getName());
 		plants.clear();
-		
-		
+	 
 		Set<Integer> set1 = new HashSet<Integer>();
 			 randColl(set1,10);
 			display(set1.iterator());
@@ -154,6 +153,8 @@ public class ContainerDemo {
 		 print(hm);
 		 for(Entry<Integer,Integer> item :hm.entrySet())
 			 print(item.getKey() +" : " +  item.getValue());
+		  
+		
 	}
 
 }

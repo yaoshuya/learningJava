@@ -5,6 +5,7 @@ import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.EOFException;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -14,6 +15,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream; 
 import java.util.Random;
+
 import static net.mindview.util.Print.*;
 import Models.Student;
 public class ioDemo {
@@ -106,12 +108,32 @@ public class ioDemo {
 		ois.close();
 	}
 	
+	static void createFolder(String dir)
+	{
+		File _dir = new File(dir);
+		if(_dir.exists())
+			return;
+			else
+		_dir.mkdirs();
+	}
+	static void delFolder(String dir)
+	{
+		//java won't delete folder with files in it
+		//you should delete the file one by one in the folder
+		File _dir = new File(dir);
+		if(_dir.exists())
+			_dir.delete();
+		else return;
+	}
 	public static void main(String[] args) throws IOException, ClassNotFoundException
 	{
 		//writeChar();readChar();
 		//writebin();readBin();	 
-		writeObj();
-		readObj();
+		//writeObj();
+		//readObj();
+		final String dir = "/home/student/data/test";
+		createFolder(dir);
+		delFolder(dir);
 	}	
 	
 }

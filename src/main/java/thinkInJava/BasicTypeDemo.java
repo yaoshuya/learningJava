@@ -57,12 +57,14 @@ public class BasicTypeDemo {
 		
 	}
 	
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		//stringdemo();	
 		//strinbBufferDemo();
-		//basicTypeDemo();
+		basicTypeDemo();
 		
 	}
-
-	
+ 
 } 

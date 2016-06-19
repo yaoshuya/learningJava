@@ -48,18 +48,8 @@ public class Test {
 		
 		public static void main(String[] args) throws IOException
 		{
-			//Runtime r = Runtime.getRuntime();
-			//Process p = r.exec("notepad.exe abc.txt");
-			//p.destroy();
-			//Properties prop = System.getProperties();
-			//for(Entry<?, ?> item :prop.entrySet())
-			//	print(item.getKey() + " : " + item.getValue());+
-			//add / from classes folder to find properties file, if not add /, find from the package
-			String filepath = "D:/code/git/learningJava/test.properties";
-			String filepath2 = "/test.properties";
-			  
-			Properties p2 = getProperty(filepath2,1);
-			print(p2.get("key1"));
-			print(p2.get("key2"));
+		 String abc = "I am a java programer";
+		 print(abc.hashCode());
+		 
 		}
 }
