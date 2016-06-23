@@ -73,6 +73,7 @@ System.out.println(v);
 		while(bis.available()>0)
 		{
 			int x=bis.read(); 
+			System.out.println(x);
 		}
 		bis.close();
 	}
@@ -97,6 +98,7 @@ System.out.println(v);
 			while((obj=ois.readObject())!=null)
 			{
 				Student s = (Student) obj; 
+				System.out.println(s);
 			}
 		}
 		catch(EOFException eof)

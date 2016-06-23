@@ -6,8 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
  
-
-@SuppressWarnings("unused")
+ 
 public class Test {
 		private static int i;
 		static private int counter;
