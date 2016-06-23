@@ -1,14 +1,9 @@
 package thinkInJava;
 
-import static net.mindview.util.Print.*;
-
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Map.Entry;
 import java.util.Properties;
  
 
@@ -25,8 +20,8 @@ public class Test {
 		
 		public void printMsg()
 		{    
-			print(i);
-			print("total number of class Test is " + counter);
+System.out.println(i);
+System.out.println("total number of class Test is " + counter);
 		}
 		public static Properties getProperty(String filepath,Integer method) throws IOException
 		{
@@ -42,14 +37,14 @@ public class Test {
 					FileInputStream fis = new FileInputStream(new File(filepath));
 					p.load(fis);
 				}
-			print(p.get("key2"));
+System.out.println(p.get("key2"));
 			return p;
 		}
 		
 		public static void main(String[] args) throws IOException
 		{
 		 String abc = "I am a java programer";
-		 print(abc.hashCode());
+System.out.println(abc.hashCode());
 		 
 		}
 }

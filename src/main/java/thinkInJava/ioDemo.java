@@ -16,8 +16,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream; 
 import java.util.Random;
 
-import static net.mindview.util.Print.*;
 import Models.Student;
+ 
 public class ioDemo {
 //generate 10 numbers and write it to a text file
  /*
@@ -32,7 +32,7 @@ public class ioDemo {
 	public static void writeChar( ) throws IOException
 	{
 		//java.io.tmpdir 
-		print("java.io.tmpdir is :"+ tmp);
+System.out.println("java.io.tmpdir is :"+ tmp);
 		String filename = "iodemo.txt";
 		BufferedWriter bow = new BufferedWriter(new FileWriter(tmp + filename));
 		Random rand = new Random(47);
@@ -47,7 +47,7 @@ public class ioDemo {
 		BufferedReader bfr = new BufferedReader(new FileReader(filepath));
 		String tmp = bfr.readLine();
 		while (null != tmp){
-			print(tmp);
+System.out.println(tmp);
 			tmp=bfr.readLine();
 		}
 		bfr.close();
@@ -61,7 +61,7 @@ public class ioDemo {
 			{
 				int v = rand.nextInt(100);
 				bos.write(v);
-				print(v);
+System.out.println(v);
 			}
 			
 		bos.close();
@@ -72,8 +72,7 @@ public class ioDemo {
 		BufferedInputStream bis = new BufferedInputStream(new FileInputStream(tmp + filename));
 		while(bis.available()>0)
 		{
-			int x=bis.read();
-			printnb(x + "\r\n");
+			int x=bis.read(); 
 		}
 		bis.close();
 	}
@@ -97,8 +96,7 @@ public class ioDemo {
 		{
 			while((obj=ois.readObject())!=null)
 			{
-				Student s = (Student) obj;
-				print(s);  
+				Student s = (Student) obj; 
 			}
 		}
 		catch(EOFException eof)

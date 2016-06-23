@@ -1,0 +1,1 @@
+{"path":"/tmp/SystemOut.log","keyword":"OutOfMemory","host":"localhost","ip":"127.0.0.1","index":"test","message":"OutOfMemory occurs ,please check the message!","timestamp":"2016-06-06","risk":"高","busName":"Hadoop","spark_receive_at":"2016-06-06"}

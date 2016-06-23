@@ -1,10 +1,8 @@
 package thinkInJava;
 
-import java.util.Date;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.TimeZone;
-
-import static net.mindview.util.Print.*;
 
 public class DateDemo {
 	  private static final String DATEFORMAT ="yyyy-MM-dd'T'HH:mm:ss'Z'";
@@ -12,7 +10,7 @@ public class DateDemo {
 	  public static void main(String[] args)
 	  {
 		 final String dt = GetUTCdatetimeAsString();
-		 print(dt);
+System.out.println(dt);
 	  }
 	  
 	  public static String GetUTCdatetimeAsString()

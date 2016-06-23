@@ -1,10 +1,6 @@
 package thinkInJava;
 
 import java.io.Serializable;
-import java.util.AbstractCollection;
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -12,18 +8,13 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Queue;
 import java.util.Random;
 import java.util.Set;
-import java.util.SortedMap;
 import java.util.SortedSet;
 import java.util.Stack;
 import java.util.TreeSet;
-import java.util.Vector;
-
-import static net.mindview.util.Print.*;
 @SuppressWarnings("unused")
 public class ContainerDemo {
 
@@ -97,10 +88,10 @@ public class ContainerDemo {
 	
 	 static void display(Iterator<Integer> it)
 	{
-		 print("start .....");
+System.out.println("start .....");
 		while (it.hasNext())
-			print(it.next());
-		print("finished....");
+System.out.println(it.next());
+System.out.println("finished....");
 	}
 	 static void randColl(Collection<Integer> c,Integer limit)
 	 {
@@ -125,7 +116,7 @@ public class ContainerDemo {
 		//custome sort by name
 		Collections.sort(plants);
 		for(Plant p : plants)
-			print(p + " :" + p.getName());
+System.out.println(p + " :" + p.getName());
 		plants.clear();
 	 
 		Set<Integer> set1 = new HashSet<Integer>();
@@ -141,7 +132,7 @@ public class ContainerDemo {
 		 Stack<Integer> st = new Stack<Integer>();
 		 randColl(st, 5);
 		 while(!st.isEmpty())
-			 print(st.pop());
+System.out.println(st.pop());
 		 HashMap<Integer,Integer> hm = new HashMap<Integer,Integer>();
 		 Random rand = new Random(47);
 		 for(int i=0;i<100;i++)
@@ -150,9 +141,9 @@ public class ContainerDemo {
 			 Integer freq = hm.get(r);
 			 hm.put(r, null==freq? 1 : freq+1);
 		 }
-		 print(hm);
+System.out.println(hm);
 		 for(Entry<Integer,Integer> item :hm.entrySet())
-			 print(item.getKey() +" : " +  item.getValue());
+System.out.println(item.getKey() +" : " +  item.getValue());
 		  
 		
 	}

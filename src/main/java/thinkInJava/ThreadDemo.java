@@ -1,7 +1,5 @@
 package thinkInJava;
 
-import static net.mindview.util.Print.*;
-
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,7 +9,7 @@ class  ThreadDemo
 	{
 		public void finalize()
 		{
-			print("demo ok");
+System.out.println("demo ok");
 		}
 	}
 	
@@ -23,7 +21,7 @@ class  ThreadDemo
 			while(true)
 			{
 				try {
-					print(getCurrentTimeStamp("yyyyMMddHHmmss"));
+System.out.println(getCurrentTimeStamp("yyyyMMddHHmmss"));
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
@@ -50,7 +48,7 @@ class  ThreadDemo
 			synchronized(obj)
 			{
 				sum +=val;
-				print("bank sum is increacing to :" + sum);
+System.out.println("bank sum is increacing to :" + sum);
 			}
 		}
 	}
