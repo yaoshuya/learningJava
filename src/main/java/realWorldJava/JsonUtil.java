@@ -57,7 +57,7 @@ public class JsonUtil {
 		return null;
 	}
 	
-	public <T> T json2obj(String json,Class<T> clz) {
+	public  <T> T json2Obj(String json,Class<T> clz) {
 		try {
 			mapper = getMapper();
 			return mapper.readValue(json,clz);

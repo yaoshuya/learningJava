@@ -1,7 +1,13 @@
 package realWorldJava;
 
-public class AlarmMsgEntity {
+import java.io.Serializable;
+
+public class AlarmMsgEntity implements Serializable {
 	 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 9999L;
 	private String path;
 	private String keyword;
 	private String host;
@@ -13,6 +19,10 @@ public class AlarmMsgEntity {
 	private String busName;
 	private String spark_receive_at;
 	
+	public String getRedisKey()
+	{ 
+		return "AlarmTransfer:" + busName + risk;
+	}
 	
 	public String getPath() {
 		return path;
