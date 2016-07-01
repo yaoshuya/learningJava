@@ -3,10 +3,13 @@ package realWorldJava;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import Models.AlarmSenderEntity;
 import Utils.SpringUtils;
@@ -19,21 +22,18 @@ public class ExecuteShell {
 	public void TestRedis() {
 		RedisTemplate<String, String> jedisTemplate = (RedisTemplate<String, String>) SpringUtils
 				.getBean("jedisTemplate");
+		jedisTemplate.setValueSerializer(new StringRedisSerializer());
 		Long size = jedisTemplate.opsForList().size(MsgListName);
 
 		if (0L == size)
 			return;
 //		// show the Hashmap 's value
-//		Map<Object, Object> hm = jedisTemplate.opsForHash().entries(
-//				"Sender_Rules_HashMap");
-//		for (Entry<Object, Object> entry : hm.entrySet()) {
-//			AlarmSenderEntity ae = (AlarmSenderEntity) entry.getValue();
-//			System.out.println(entry.getKey()
-//					+ ":"
-//					+ ReflectionToStringBuilder.toString(ae,
-//							ToStringStyle.MULTI_LINE_STYLE));
-//		}
-		for (int i = 0; i < size; i++) {
+		Map<Object, Object> hm = jedisTemplate.opsForHash().entries(
+				"Sender_Rules_HashMap");
+		for (Entry<Object, Object> entry : hm.entrySet()) {
+			 System.out.println(entry.getKey());
+		}
+		for (int i = 0; i < 1; i++) {
 			String json = jedisTemplate.opsForList().rightPop(MsgListName);
 			AlarmMsgEntity entity = JsonUtil.getInstance().json2Obj(json,
 					AlarmMsgEntity.class);
@@ -44,6 +44,7 @@ public class ExecuteShell {
 
 			if (jedisTemplate.opsForHash().hasKey("Sender_Rules_HashMap",
 					entity.getRedisKey())) {
+				System.out.println("find one .................");
 				AlarmSenderEntity ae = (AlarmSenderEntity) jedisTemplate.opsForHash().get(
 						"Sender_Rules_HashMap", entity.getRedisKey());
 				if (ae.getSendType().equals("短信")) { 
@@ -59,8 +60,10 @@ public class ExecuteShell {
 	public static void main(String[] args) {
 		ExecuteShell es = new ExecuteShell();
 		es.TestRedis();
+		String basepath = ExecuteShell.class.getResource("/").getPath();
+		System.out.println(basepath);
 		try {
-			logger.info(executeShell("sh /home/student/sendMsg.sh abc"));
+			logger.info(executeShell(new String[] {"sh",basepath + "/sendMsg.sh","abc","def ght"} ));
 		} catch (IOException e) {
 			logger.debug("something wrong with execute the command", e);
 		} catch (InterruptedException e) {
@@ -68,7 +71,7 @@ public class ExecuteShell {
 		}
 	}
 
-	public static String executeShell(String cmds) throws IOException,
+	public static String executeShell(String[] cmds) throws IOException,
 			InterruptedException {
 		final Process p = Runtime.getRuntime().exec(cmds);
 		int exitValue = p.waitFor();

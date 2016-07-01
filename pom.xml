@@ -17,9 +17,18 @@
 		<plugin.maven-surefire>2.18.1</plugin.maven-surefire>
 		<skipTests>true</skipTests>
 		<spring.version>4.2.4.RELEASE</spring.version>
+		<!-- quartz版本 -->
+		<quartz.version>2.2.2</quartz.version>
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<version>${quartz.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>cglib</groupId>
 			<artifactId>cglib</artifactId>

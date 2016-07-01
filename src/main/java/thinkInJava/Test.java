@@ -5,45 +5,42 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
- 
- 
+
 public class Test {
-		private static int i;
-		static private int counter;
-		
-		public Test(int _i)
-		{
-			i = _i;	
-			counter++;
+	private static int i;
+	static private int counter;
+
+	public Test(int _i) {
+		i = _i;
+		counter++;
+	}
+
+	public void printMsg() {
+		System.out.println(i);
+		System.out.println("total number of class Test is " + counter);
+	}
+
+	public static Properties getProperty(String filepath, Integer method)
+			throws IOException {
+		Properties p = new Properties();
+		if (method.equals(1)) {
+			InputStream is = Test.class.getResourceAsStream(filepath);
+			// InputStream is =
+			// Thread.currentThread().getContextClassLoader().getResourceAsStream(filepath);
+			p.load(is);
+		} else {
+			FileInputStream fis = new FileInputStream(new File(filepath));
+			p.load(fis);
 		}
-		
-		public void printMsg()
-		{    
-System.out.println(i);
-System.out.println("total number of class Test is " + counter);
-		}
-		public static Properties getProperty(String filepath,Integer method) throws IOException
-		{
-			Properties p = new Properties();
-			if(method.equals(1))
-			{	
-				InputStream is =Test.class.getResourceAsStream(filepath);			
-				//InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(filepath);
-				p.load(is);
-			}
-			else
-				{
-					FileInputStream fis = new FileInputStream(new File(filepath));
-					p.load(fis);
-				}
-System.out.println(p.get("key2"));
-			return p;
-		}
-		
-		public static void main(String[] args) throws IOException
-		{
-		 String abc = "I am a java programer";
-System.out.println(abc.hashCode());
-		 
-		}
+		System.out.println(p.get("key2"));
+		return p;
+	}
+
+	public static void main(String[] args) throws IOException {
+		String str = "I am ok!";
+		String str2 =" you will be ko!";
+		System.out.println(str.endsWith("ok!"));
+		System.out.println(str2.endsWith("ok!"));
+
+	}
 }

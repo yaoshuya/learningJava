@@ -1,7 +1,9 @@
 package ch4;
 
-import java.lang.reflect.Method;
 import java.util.HashMap;
+
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 public class CglibTest {
 	
@@ -26,12 +28,7 @@ public class CglibTest {
     System.out.println("  >> address = " + bean.getValue("address"));
  
     Object object = bean.getObject();
- 
-    Class<? extends Object> clazz = object.getClass();
-    Method[] methods = clazz.getDeclaredMethods();
-    for (int i = 0; i < methods.length; i++) {
-        System.out.println(methods[i].getName());
-    }
-    
+    System.out.println(ReflectionToStringBuilder.toString(object,ToStringStyle.MULTI_LINE_STYLE));
+	
 	}
 }
