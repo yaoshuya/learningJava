@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -11,9 +12,27 @@ import org.apache.commons.io.FileUtils;
 
 public class CliHandler {
 	
-	private String dir ;
+	private String dir ; 
+	
 	public void setDir(String _dir){
 		this.dir = _dir;
+	}
+	 
+	public Tuple[] filterKeyword (String keyword){
+		
+		List<Tuple> ret2 = new ArrayList<Tuple>();
+		
+		try {
+			List<String> fileList = FileUtils.readLines(new File(dir),"UTF-8");
+			for(String file:fileList)
+				if(file.contains(keyword)) 
+					ret2.add(new Tuple(file.split("\\|")[0],file.split("\\|")[1]));
+		} catch (IOException e) { 
+			e.printStackTrace();
+		}
+		Tuple[] ret = new Tuple[ret2.size()];
+		ret2.toArray(ret);
+		return ret;
 	}
 	
 	private void filterKeyword(List<String> fileList, String keyword){
@@ -38,4 +57,6 @@ public class CliHandler {
 			keyword = bfr.readLine();
 		}
 	}
+	
+	
 }

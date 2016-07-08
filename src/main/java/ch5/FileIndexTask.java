@@ -45,7 +45,7 @@ public class FileIndexTask implements Runnable {
 		List<File> files = (List<File>) FileUtils.listFiles(dir, extensions, true);
 		StringBuilder sb = new StringBuilder();
 		for (File file : files) {
-			sb.append(file.getName() + "			" + file.getAbsolutePath() + "\n");
+			sb.append(file.getName() + "|" + file.getAbsolutePath() + "\n");
 		}
 		try {
 			FileUtils.writeStringToFile(new File(indexFile),

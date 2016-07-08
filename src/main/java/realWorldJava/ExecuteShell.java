@@ -58,12 +58,12 @@ public class ExecuteShell {
 	}
 
 	public static void main(String[] args) {
-		ExecuteShell es = new ExecuteShell();
-		es.TestRedis();
+//		ExecuteShell es = new ExecuteShell();
+//		es.TestRedis();
 		String basepath = ExecuteShell.class.getResource("/").getPath();
 		System.out.println(basepath);
 		try {
-			logger.info(executeShell(new String[] {"sh",basepath + "/sendMsg.sh","abc","def ght"} ));
+			logger.info(executeShell(new String[] {"sh",basepath + "/sendMsg.sh","abc","def ght dsf"} ));
 		} catch (IOException e) {
 			logger.debug("something wrong with execute the command", e);
 		} catch (InterruptedException e) {

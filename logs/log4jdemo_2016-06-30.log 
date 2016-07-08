@@ -1,0 +1,51 @@
+2016-06-30 06:52:16 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 06:55:24 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 06:57:12 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 06:57:38 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 06:58:21 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 07:06:15 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 07:08:38 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 14:44:29 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 14:44:29 INFO  realWorldJava.ExecuteShell:[line:66] - abc
+2016-06-30 14:44:41 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 14:44:41 INFO  realWorldJava.ExecuteShell:[line:66] - abc
+2016-06-30 14:50:00 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 14:50:01 DEBUG realWorldJava.ExecuteShell:[line:69] - something wrong with execute the command
+java.io.IOException: Cannot run program "/home/student/git/learningJava/target/classes//sh": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1047)
+	at java.lang.Runtime.exec(Runtime.java:617)
+	at java.lang.Runtime.exec(Runtime.java:450)
+	at java.lang.Runtime.exec(Runtime.java:347)
+	at realWorldJava.ExecuteShell.executeShell(ExecuteShell.java:77)
+	at realWorldJava.ExecuteShell.main(ExecuteShell.java:67)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:187)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1028)
+	... 5 more
+2016-06-30 15:33:16 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 17:48:42 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 17:48:42 INFO  realWorldJava.ExecuteShell:[line:68] - abc
+2016-06-30 17:49:24 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 17:49:24 INFO  realWorldJava.ExecuteShell:[line:68] - abc def
+2016-06-30 17:49:38 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 17:49:38 INFO  realWorldJava.ExecuteShell:[line:68] - abc def
+2016-06-30 17:49:56 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 17:49:57 INFO  realWorldJava.ExecuteShell:[line:68] - abc "def
+2016-06-30 17:50:15 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 17:50:15 INFO  realWorldJava.ExecuteShell:[line:68] - abc 'def
+2016-06-30 17:51:35 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 17:51:36 INFO  realWorldJava.ExecuteShell:[line:68] - abc '"def
+2016-06-30 17:52:06 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 17:52:06 INFO  realWorldJava.ExecuteShell:[line:68] - abc /def
+2016-06-30 17:52:41 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 17:52:41 INFO  realWorldJava.ExecuteShell:[line:68] - abc 'def
+2016-06-30 17:52:56 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 17:52:56 INFO  realWorldJava.ExecuteShell:[line:68] - abc "def
+2016-06-30 17:53:13 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 17:53:14 INFO  realWorldJava.ExecuteShell:[line:68] - abc def
+2016-06-30 17:54:25 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 17:54:25 INFO  realWorldJava.ExecuteShell:[line:68] - abc def
+2016-06-30 22:52:14 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-06-30 22:52:45 INFO  realWorldJava.ExecuteShell:[line:68] - abc def ght

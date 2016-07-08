@@ -12,4 +12,10 @@ public class SpringUtils {
 	public static Object getBean(String beanName) {
 		return ctx.getBean(beanName);
 	}
+	
+	public static <T> T getBean(String beanName,Class<T> clazz){
+		return ctx.getBean(beanName, clazz);
+	}
+	
+	
 }
