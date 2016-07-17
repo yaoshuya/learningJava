@@ -25,8 +25,13 @@ public class CliHandler {
 		try {
 			List<String> fileList = FileUtils.readLines(new File(dir),"UTF-8");
 			for(String file:fileList)
-				if(file.contains(keyword)) 
-					ret2.add(new Tuple(file.split("\\|")[0],file.split("\\|")[1]));
+				{
+				if(!file.contains("|"))continue;
+				String fileName = file.split("\\|")[0];
+				String filePath = file.split("\\|")[1];
+				if(fileName.contains(keyword)) 
+					ret2.add(new Tuple(fileName,filePath));
+				}
 		} catch (IOException e) { 
 			e.printStackTrace();
 		}

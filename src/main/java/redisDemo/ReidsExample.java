@@ -39,5 +39,9 @@ public class ReidsExample {
 		jedisTemplate.expire("jedis_hash_test", 5, TimeUnit.MINUTES);
 		if (jedisTemplate.opsForHash().hasKey("jedis_hash_test", "key1"))
 			System.out.println("hash key");
+		
+		
+		jedisTemplate.opsForValue().set("/home/我的桌面/abc def.log","100");
+		 
 	}
 }

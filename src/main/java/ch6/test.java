@@ -1,9 +1,12 @@
 package ch6;
 
+import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+
+import Utils.EncryptionUtil;
 
 public class test {
 	public static void main(String[] args) throws ParseException {
@@ -12,6 +15,15 @@ public class test {
 		String str2 = abc.split("\\|")[1];
 		System.out.println(str1);
 		System.out.println(str2);
+		
+		try {
+			String xxx = EncryptionUtil.md5("/home/student/abc def.log");
+			System.out.println(xxx);
+			System.out.println(xxx.length());
+		} catch (NoSuchAlgorithmException e) { 
+			e.printStackTrace();
+		}
+		
 	}
 	
 	private static boolean checkValidDate(String _st,String _et) {
