@@ -18,23 +18,23 @@ public class BlockingQueue<T> implements IBlockingQueue<T> {
 	public void put(T element) throws InterruptedException {
 		lock.lock();
 		while (queue.size() == capacity) {
-			wait();
+			condition.await();
 		}
 		queue.add(element);
-		lock.unlock();
-		//notifyAll();
 		condition.signalAll();
+		lock.unlock();
+		
 	}
 
 	public T take() throws InterruptedException {
 		lock.lock();
 		while (queue.isEmpty()) {
-			wait();
+			condition.await();
 		}
 		T item = queue.remove();
-		lock.unlock();
-		//notifyAll();
+		
 		condition.signalAll();
+		lock.unlock();
 		return item;
 	}
 }
