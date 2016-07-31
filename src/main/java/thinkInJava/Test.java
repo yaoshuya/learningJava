@@ -37,10 +37,14 @@ public class Test {
 	}
 
 	public static void main(String[] args) throws IOException {
-		String str = "I am ok!";
-		String str2 =" you will be ko!";
-		System.out.println(str.endsWith("ok!"));
-		System.out.println(str2.endsWith("ok!"));
+		 File f = new File("/home/student/Desktop/reference.txt");
+		 long lastModifyTS = f.lastModified();
+		 System.out.println(lastModifyTS);
+		 
+		 long  x = 1466028845000L;
+		 
+		 System.out.println( x ==lastModifyTS);
+		 
 
 	}
 }

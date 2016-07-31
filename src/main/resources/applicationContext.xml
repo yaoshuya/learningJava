@@ -49,5 +49,12 @@
 			<ref bean="dataSource" />
 		</property>
 	</bean>
+	
+	<bean id="cliCmd" class = "ch9.fileviewer.CliHandler"></bean>
  
+    <context:component-scan base-package="ch9.fileviewer"> 
+	</context:component-scan>
+	<context:component-scan base-package="ch9.dbviewer"> 
+	</context:component-scan>
+	
 </beans>

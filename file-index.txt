@@ -72,6 +72,7 @@ ClusterInfoEntity.java|/git/ccms-monitor/src/main/java/com/ibm/tss/monitor/alarm
 ThresholdSampleEntity.java|/git/ccms-monitor/src/main/java/com/ibm/tss/monitor/alarm/vo/ThresholdSampleEntity.java
 HostInfoEntity.java|/git/ccms-monitor/src/main/java/com/ibm/tss/monitor/alarm/vo/HostInfoEntity.java
 KeywordMonEntity.java|/git/ccms-monitor/src/main/java/com/ibm/tss/monitor/alarm/vo/KeywordMonEntity.java
+NoLogMonEntity.java|/git/ccms-monitor/src/main/java/com/ibm/tss/monitor/alarm/vo/NoLogMonEntity.java
 LstashCfgInfoEntity.java|/git/ccms-monitor/src/main/java/com/ibm/tss/monitor/alarm/vo/LstashCfgInfoEntity.java
 ClientInfoEntity.java|/git/ccms-monitor/src/main/java/com/ibm/tss/monitor/alarm/vo/ClientInfoEntity.java
 BusInfoEntity.java|/git/ccms-monitor/src/main/java/com/ibm/tss/monitor/alarm/vo/BusInfoEntity.java

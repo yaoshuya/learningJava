@@ -14,8 +14,7 @@ import Models.AlarmSenderEntity;
 import Utils.SpringUtils;
 
 public class jdbcExample {
-
-
+ 
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 		JdbcTemplate jdbcTemplate = (JdbcTemplate) SpringUtils.getBean("jdbcTemplate");

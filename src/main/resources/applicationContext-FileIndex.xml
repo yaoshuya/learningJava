@@ -12,6 +12,9 @@
 	<bean id="myCliHandler" class="ch5.CliHandler">
 		<property name="dir" value="file-index.txt" />
 	</bean>
-	
+ 
+	 <bean id="fileIndexTask" class="ch9.fileviewer.IndexFileTask">
+	 <constructor-arg name="filePath" value ="/home/student/logs/"></constructor-arg> 
+	</bean>
 	
 </beans>
