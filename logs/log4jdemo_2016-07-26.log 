@@ -1,0 +1,17 @@
+2016-07-26 11:50:37 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-07-26 11:50:37 INFO  com.alibaba.druid.pool.DruidDataSource:[line:1436] - {dataSource-1} closed
+2016-07-26 11:53:04 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-07-26 11:54:55 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-07-26 11:59:32 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-07-26 18:18:03 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-07-26 18:20:44 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-07-26 18:21:15 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-07-26 18:22:15 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-07-26 18:22:48 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-07-26 19:45:32 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-07-26 19:48:32 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-07-26 21:36:08 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-07-26 22:01:09 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-07-26 22:02:42 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-07-26 22:05:38 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-07-26 22:07:48 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
