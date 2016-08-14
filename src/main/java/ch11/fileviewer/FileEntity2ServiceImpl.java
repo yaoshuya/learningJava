@@ -1,4 +1,4 @@
-package ch11;
+package ch11.fileviewer;
  
 import java.util.List;
 
