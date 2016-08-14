@@ -21,5 +21,9 @@
 		<constructor-arg name="filePath" value="/home/student/logs/"></constructor-arg>
 	</bean>
 
+	<bean id="fileIndexTask3" class="ch11.IndexFileTask">
+		<constructor-arg name="filePath" value="/home/student/logs/"></constructor-arg>
+	</bean>
+
 
 </beans>

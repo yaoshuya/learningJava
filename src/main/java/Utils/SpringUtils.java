@@ -17,5 +17,8 @@ public class SpringUtils {
 		return ctx.getBean(beanName, clazz);
 	}
 	
+	public static <T> T getBean(Class<T> clazz){
+		return ctx.getBean(clazz);
+	}
 	
 }

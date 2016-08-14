@@ -1,0 +1,6 @@
+2016-08-01 21:10:52 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-08-01 21:17:57 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-08-01 21:19:33 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-08-01 21:19:33 INFO  com.alibaba.druid.pool.DruidDataSource:[line:1436] - {dataSource-1} closed
+2016-08-01 21:20:17 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited
+2016-08-01 21:47:42 INFO  com.alibaba.druid.pool.DruidDataSource:[line:721] - {dataSource-1} inited

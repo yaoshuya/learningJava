@@ -3,11 +3,13 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
 	xmlns:cache="http://www.springframework.org/schema/cache" xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
 	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
 
 	<!-- 读取mysql jdbc的配置 -->
 	<context:property-placeholder location="classpath:jdbc.properties"
@@ -51,12 +53,25 @@
 
 	<bean id="cliCmd" class="ch9.fileviewer.CliHandler"></bean>
 	<bean id="cliCmd2" class="ch10.fileviewer.CliHandler"></bean>
-
+	<bean id="cliCmd3" class="ch11.CliHandler"></bean>
+	 
 	<context:component-scan base-package="ch9.fileviewer">
 	</context:component-scan>
 	<context:component-scan base-package="ch9.dbviewer">
 	</context:component-scan>
 	<context:component-scan base-package="ch10.fileviewer">
 	</context:component-scan>
+	<context:component-scan base-package="ch11">
+	</context:component-scan>
+ 
+    <!-- <mybatis:scan base-package="ch11" /> -->
 
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" /> 
+	</bean>
+    <bean id="fileMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+ 	    <property name="mapperInterface" value="ch11.FileMapper"></property>
+	    <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+    </bean>  
+	   
 </beans>
