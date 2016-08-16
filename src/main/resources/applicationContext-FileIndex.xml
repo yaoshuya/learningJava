@@ -24,6 +24,15 @@
 	<bean id="fileIndexTask3" class="ch11.fileviewer.IndexFileTask">
 		<constructor-arg name="filePath" value="/home/student/logs/"></constructor-arg>
 	</bean>
-
+	
+ 	<bean id="myFileIndex12" class="ch12.FileIndexTask">
+		<property name="dir" value="/home/student/logs/" />
+		<property name="indexFile" value="file-index.txt" />
+	</bean>
+	
+	<bean id="myCliHandler2" class="ch12.CliHandler">
+		<property name="dir" value="file-index.txt" />
+	</bean>
+	
 
 </beans>
