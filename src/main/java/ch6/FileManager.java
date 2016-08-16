@@ -550,10 +550,6 @@ class FileManager {
                         // add the new node..
                         DefaultMutableTreeNode newNode = new DefaultMutableTreeNode(file);
 
-                        TreePath currentPath = findTreePath(currentFile);
-                        DefaultMutableTreeNode currentNode = (DefaultMutableTreeNode) currentPath
-                                .getLastPathComponent();
-
                         treeModel.insertNodeInto(newNode, parentNode, parentNode.getChildCount());
                     }
 
@@ -765,7 +761,9 @@ class FileManager {
 /** A TableModel to hold File[]. */
 class FileTableModel extends AbstractTableModel {
 
-    private File[] files;
+     
+	private static final long serialVersionUID = 1L;
+	private File[] files;
     private FileSystemView fileSystemView = FileSystemView.getFileSystemView();
     private String[] columns = { "Icon", "File", "Path/name", "Size", "Last Modified", "R", "W", "E", "D", "F", };
 
@@ -849,7 +847,12 @@ class FileTableModel extends AbstractTableModel {
 /** A TreeCellRenderer for a File. */
 class FileTreeCellRenderer extends DefaultTreeCellRenderer {
 
-    private FileSystemView fileSystemView;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private FileSystemView fileSystemView;
 
     private JLabel label;
 
