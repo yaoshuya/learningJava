@@ -64,5 +64,15 @@ public class CliHandler {
 		}
 	}
 	
+	public static void main(String[] args) {
+     StringBuilder sb = new StringBuilder();
+     sb.append("testabc " );
+     sb.append("\n  abcdefg");
+     sb.append("\r    xxxxx");
+     sb.append("\r\n     yyyyyy");
+     System.out.println(sb.toString());
+     System.out.println(sb.toString().replaceAll("\r|\n", " "));
+	}
+	
 	
 }

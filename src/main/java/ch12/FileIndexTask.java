@@ -49,8 +49,10 @@ public class FileIndexTask implements Runnable {
 		StringBuilder sb = new StringBuilder();
 		for (File file : files) {
 			try {
+				String fileCont = FileUtils.readFileToString(file,Charset.forName("UTF-8")).replace("`", "").replaceAll("\r|\n"," ");
 				sb.append(file.getName() + "`" + file.getAbsolutePath() + "`" + 
-			    FileUtils.readFileToString(file,Charset.forName("UTF-8")).replace("`", "") + "\n");
+			    fileCont + "\n");
+				System.out.println(file.getName() + ":" + fileCont);
 			} catch (IOException e) { 
 				e.printStackTrace();
 			}
