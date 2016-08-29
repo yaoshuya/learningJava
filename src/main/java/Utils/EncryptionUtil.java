@@ -1,5 +1,9 @@
 package Utils;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -53,4 +57,32 @@ public class EncryptionUtil {
         }
         return strResult.toString();
 	}
+	
+	 public static String getMD5(File file)
+	    {
+		    byte[] buffer = new byte[1024];
+	        int len = 0;
+	        try
+	        {
+	            MessageDigest messageDigest = MessageDigest.getInstance("MD5");
+	            @SuppressWarnings("resource")
+				InputStream inputStream = new FileInputStream(file);
+	            while ((len = inputStream.read(buffer)) != -1)
+	            {	
+	                messageDigest.update(buffer, 0, len);
+	            }
+	            BigInteger bigInteger = new BigInteger(1, messageDigest.digest());
+	            String hashtext = bigInteger.toString(16);
+	            while(hashtext.length() < 32 ){
+	            	  hashtext = "0"+hashtext;
+	            	}
+	            return hashtext;
+	        }
+	        catch (Exception e)
+	        {
+	            return null;
+	        }
+	    }
+	 
+	 
 }
